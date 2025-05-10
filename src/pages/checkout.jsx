@@ -38,7 +38,7 @@ export default function Checkout() {
           price: item.price
         }))
       }
-      const response = await axios.post("http://localhost:5000/api/orders", orderData,{withCredentials: true})
+      const response = await axios.post("https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net/api/orders", orderData,{withCredentials: true})
       setSuccess("Order placed successfully!")
       setTrackingId(response.data.tracking_id)
       setDialogOpen(true)

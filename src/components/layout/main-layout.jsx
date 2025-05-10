@@ -7,7 +7,7 @@ import { useAuth } from "@/contexts/auth-context"
 import Navbar from "../Navbar"
 
 
-const API_URL = "http://localhost:5000"
+const API_URL = "https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net"
 
 export function MainLayout({ children }) {
   const [categories, setCategories] = useState([])

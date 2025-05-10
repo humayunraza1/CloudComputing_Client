@@ -24,7 +24,7 @@ export default function OrderHistory() {
   useEffect(() => {
     if (!user) return
     setLoading(true)
-    axios.get(`http://localhost:5000/api/user/orders`, { withCredentials: true })
+    axios.get(`https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net/api/user/orders`, { withCredentials: true })
       .then(res => {
         setOrders(res.data)
         setError("")

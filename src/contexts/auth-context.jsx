@@ -16,7 +16,7 @@ export function AuthProvider({ children }) {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/auth/me", { withCredentials: true })
+      const response = await axios.get("https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net/auth/me", { withCredentials: true })
       console.log(response.data)
       setUser(response.data)
     } catch (error) {
@@ -28,7 +28,7 @@ export function AuthProvider({ children }) {
 
   const login = async (identifier, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/auth/login", {
+      const response = await axios.post("https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net/auth/login", {
         identifier,
         password,
       }, { withCredentials: true })
@@ -46,7 +46,7 @@ export function AuthProvider({ children }) {
 
   const register = async (name, email, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/auth/register", {
+      const response = await axios.post("https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net/auth/register", {
         name,
         email,
         password,
@@ -66,7 +66,7 @@ export function AuthProvider({ children }) {
 
   const logout = async () => {
     try {
-      await axios.post("http://localhost:5000/auth/logout", {}, { withCredentials: true })
+      await axios.post("https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net/auth/logout", {}, { withCredentials: true })
     } catch (err) {
       // Optionally handle error
       console.log(err)

@@ -18,7 +18,7 @@ export default function Register() {
     setError("")
     setSuccess("")
     try {
-      await axios.post("http://localhost:5000/auth/register", data)
+      await axios.post("https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net/auth/register", data)
       setSuccess("Registration successful! You can now log in.")
       setTimeout(() => navigate("/login"), 1500)
     } catch (err) {

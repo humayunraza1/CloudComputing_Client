@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-const API_URL = "http://localhost:5000"
+const API_URL = "https://cloud-computing-server-cdaqdbameug5gud6.southeastasia-01.azurewebsites.net"
 
 export default function Products() {
   const [products, setProducts] = useState([])
